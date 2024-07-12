@@ -1,0 +1,63 @@
+.container{
+  display: grid;
+  grid-template-rows: 100px 500px;
+  grid-template-columns: 200px 1fr;
+}
+.leftMenu{
+  background-color: blue;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.header{
+  background-color: grey;
+}
+.content{
+  display: grid;
+  background-color: green;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+.projects{
+  background-color: red;
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-template-rows: 70px repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.projectTitle{
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+.projectCard{
+  background-color: white;
+}
+.announcements{
+  background-color: pink;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px repeat(3, 1fr); 
+  gap: 5px;
+}
+.announcementTitle{
+  background-color: red;
+}
+.announcementCard{
+  background-color: white;
+}
+.trending{
+  background-color: yellow;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px repeat(4, 1fr); 
+  gap: 5px;
+}
+.trendingTitle{
+  background-color: red;
+}
+.trendingCard{
+  background-color: white;
+}
