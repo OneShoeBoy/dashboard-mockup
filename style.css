@@ -1,63 +1,118 @@
+:root{
+  font-family: sans-serif;
+}
 .container{
   display: grid;
   grid-template-rows: 100px 500px;
   grid-template-columns: 200px 1fr;
 }
 .leftMenu{
-  background-color: blue;
+  display: grid;
+  background-color: #083344;
+  color: white;
   grid-row-start: 1;
   grid-row-end: 3;
+  grid-template-rows: 0.5fr 3fr;
+  grid-template-columns: 0.5fr 1fr;
+}
+.menuTitle{
+ grid-row-start: 1;
+ grid-row-end: 1;
+ grid-column-start: 1;
+ grid-column-end: 3;
+}
+.menuSymbolContainer{
+  display: flex;
+  flex-direction: column;
+}
+.menuSymbol{
+}
+.menuTextContainer{
 }
 .header{
-  background-color: grey;
+  background-color: #155e7e;
 }
 .content{
   display: grid;
-  background-color: green;
+  background-color: #0891b2;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
 }
 .projects{
-  background-color: red;
+  padding-left: 20px;
+  padding-bottom: 20px;
   display: grid;
   grid-row-start: 1;
   grid-row-end: 3;
-  grid-template-rows: 70px repeat(3, 1fr);
+  grid-template-rows: 50px repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
 }
-.projectTitle{
+.projectHeader{
   grid-column-start: 1;
   grid-column-end: 3;
-
 }
 .projectCard{
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  border-radius: 10px;
+  border-left: 8px solid blue;
+}
+.projectTitle{
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px 5px 0px 10px;
+}
+.projectContent{
+  padding: 15px 50px 10px 30px;
+}
+.symbolContainer{
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+.projectSymbols{
+  padding-right: 15px;
 }
 .announcements{
-  background-color: pink;
+  padding-right: 20px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px repeat(3, 1fr); 
-  gap: 5px;
+  grid-template-rows: 50px 1fr;
 }
-.announcementTitle{
-  background-color: red;
+.announcementsTitle{
+}
+.announcementsContainer{
+  display: grid;
+  background-color: white;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  background-color: #fafafa;
+  border-radius: 10px;
+  gap: 10px;
 }
 .announcementCard{
-  background-color: white;
+  border: solid;
 }
 .trending{
-  background-color: yellow;
+  padding-right: 20px;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px repeat(4, 1fr); 
-  gap: 5px;
+  grid-template-rows: 50px 1fr; 
 }
 .trendingTitle{
-  background-color: red;
+}
+.trendingContainer{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  background-color: #fafafa;
+  border-radius: 10px;
+  gap: 10px;
 }
 .trendingCard{
-  background-color: white;
+  display: grid;
 }
