@@ -12,7 +12,7 @@
   color: white;
   grid-row-start: 1;
   grid-row-end: 3;
-  grid-template-rows: 0.5fr 3fr;
+  grid-template-rows: 0.3fr 3fr;
   grid-template-columns: 0.5fr 1fr;
 }
 .menuTitle{
@@ -24,10 +24,15 @@
 .menuSymbolContainer{
   display: flex;
   flex-direction: column;
+  filter: invert(100%) sepia(4%) saturate(2607%) hue-rotate(175deg) brightness(100%) contrast(98%);
 }
 .menuSymbol{
+  padding-bottom: 20px;
+  padding-left: 10px;
 }
 .menuTextContainer{
+  display: flex;
+  flex-direction: column;
 }
 .header{
   background-color: #155e7e;
