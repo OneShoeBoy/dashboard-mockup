@@ -1,35 +1,66 @@
 :root{
   font-family: sans-serif;
+  --svg-colour-invert: invert(100%) sepia(4%) saturate(2607%) hue-rotate(175deg) brightness(100%) contrast(98%);
+  --font-color: #fafafa;
 }
 .container{
   display: grid;
-  grid-template-rows: 100px 500px;
+  grid-template-rows: 100px 600px;
   grid-template-columns: 200px 1fr;
+}
+.header{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.profileInfo{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.headerButtons{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 .leftMenu{
   display: grid;
   background-color: #083344;
-  color: white;
   grid-row-start: 1;
   grid-row-end: 3;
   grid-template-rows: 0.3fr 3fr;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 0.3fr 1fr;
+  color: var(--font-color);
 }
-.menuTitle{
- grid-row-start: 1;
- grid-row-end: 1;
- grid-column-start: 1;
- grid-column-end: 3;
+.menuTitleContainer{
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.dashboardSymbol{
+  height: 50px;
+  filter: var(--svg-colour-invert);
+}
+.dashboardTitle{
+  font-size: 1.3rem;
+  height: 50px;
+  vertical-align: middle;
+  line-height: 50px;
+  text-align: center;
 }
 .menuSymbolContainer{
   display: flex;
   flex-direction: column;
-  filter: invert(100%) sepia(4%) saturate(2607%) hue-rotate(175deg) brightness(100%) contrast(98%);
+  padding-left: 10px;
+  filter: var(--svg-colour-invert);
 }
 .menuSymbol{
   height: 50px;
-  /*padding-bottom: 20px;*/
-  /*padding-left: 10px;*/
 }
 .menuTextContainer{
   display: flex;
@@ -40,30 +71,41 @@
   height: 50px;
   vertical-align: middle;
   line-height: 50px;
+  padding-left: 10px;
+}
+.menuBreak{
+  padding: 5px;
 }
 .header{
   background-color: #155e7e;
+  position: relative;
 }
 .content{
   display: grid;
   background-color: #0891b2;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 20px;
+  box-shadow: inset 0px 2px 3px 0px black;
 }
 .projects{
   padding-left: 20px;
   padding-bottom: 20px;
+  padding-right: 20px;
   display: grid;
   grid-row-start: 1;
   grid-row-end: 3;
   grid-template-rows: 50px repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
+  gap: 10px;
 }
 .projectHeader{
   grid-column-start: 1;
   grid-column-end: 3;
+  font-size: 1.1rem;
+  padding-top: 5px;
+  color: var(--font-color);
+  line-height: 50px;
+  vertical-align: bottom;
 }
 .projectCard{
   display: flex;
@@ -71,6 +113,8 @@
   background-color: #fafafa;
   border-radius: 10px;
   border-left: 8px solid blue;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0px black;
 }
 .projectTitle{
   font-size: 1.2rem;
@@ -93,8 +137,14 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 1fr;
+  gap: 5px;
 }
-.announcementsTitle{
+.announcementsHeader{
+  font-size: 1.1rem;
+  padding-top: 5px;
+  color: var(--font-color);
+  line-height: 50px;
+  vertical-align: bottom;
 }
 .announcementsContainer{
   display: grid;
@@ -103,10 +153,25 @@
   grid-template-columns: 1fr;
   background-color: #fafafa;
   border-radius: 10px;
-  gap: 10px;
+  box-shadow: 5px 5px 5px 0px black;
 }
 .announcementCard{
-  border: solid;
+  margin: auto;
+  width: 80%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.announcementCard:nth-child(-n+2){
+  border-bottom: solid;
+  border-color: lightgrey;
+}
+.announcementTitle{
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.announcementContent{
+  font-size: 0.8rem;
+  color: dimgray;
 }
 .trending{
   padding-right: 20px;
@@ -115,7 +180,12 @@
   grid-template-columns: 1fr;
   grid-template-rows: 50px 1fr; 
 }
-.trendingTitle{
+.trendingHeader{
+  font-size: 1.1rem;
+  padding-top: 5px;
+  color: var(--font-color);
+  line-height: 50px;
+  vertical-align: bottom;
 }
 .trendingContainer{
   display: grid;
@@ -123,8 +193,25 @@
   grid-template-columns: 1fr;
   background-color: #fafafa;
   border-radius: 10px;
-  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0px black;
 }
 .trendingCard{
-  display: grid;
+  margin: auto;
+  width: 80%;
+  font-size: 0.9rem;
+  color: dimgray;
+  line-height: 50px;
+  vertical-align: middle;
+  padding-bottom: 5px;
+}
+.trendingCard:nth-child(-n+3){
+  border-bottom: solid;
+  border-color: lightgrey;
+}
+.trendingCard:nth-child(1){
+  padding-top: 5px;
+}
+.trendingCard:nth-child(4){
+  padding-bottom: 5px;
 }
