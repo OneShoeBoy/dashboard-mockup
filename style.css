@@ -13,17 +13,61 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+.headerSearch{
+  display: flex;
+  flex-direction: row;
+}
+.searchBar{
+  border-radius: 30px;
+  border: none;
+  background-color: darkgray;
+  height: 30px;
+  width: 80%;
+  margin: auto;
+}
+.searchBar:focus{
+  outline: none;
+  box-shadow: 0px 1px 10px 0px black;
+}
+.profileHeader{
+  color: var(--font-color);
+  font-size: 1.5rem;
+  line-height: 50px;
+  vertical-align: middle;
+  margin-left: 20px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
 .profileInfo{
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
+  color: var(--font-color);
+  line-height: 50px;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 50px;
 }
 .headerButtons{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+  padding-top: 5px;
+  /*margin-top: auto;*/
+  /*margin-bottom: auto;*/
+}
+button{
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  background-color: #093344;
+  color: var(--font-color);
+  height: 30px; 
+  width: 80%;
 }
 .leftMenu{
   display: grid;
